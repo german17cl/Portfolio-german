@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import {
     Menu,
     X,
@@ -8,6 +8,35 @@ import {
 } from 'lucide-vue-next'
 
 const isMenuOpen = ref(false)
+const activeSection = ref('home')
+
+const sections = ['home', 'about', 'experience', 'projects', 'contact']
+
+const updateActiveSection = () => {
+    let current = 'home'
+
+    for (const section of sections) {
+        const el = document.getElementById(section)
+
+        if (el) {
+            const rect = el.getBoundingClientRect()
+
+            if (rect.top <= 120 && rect.bottom >= 120) {
+                current = section
+            }
+        }
+    }
+
+    activeSection.value = current
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', updateActiveSection)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', updateActiveSection)
+})
 </script>
 
 <template>
@@ -32,63 +61,64 @@ const isMenuOpen = ref(false)
     </header>
 
     <!-- MENU MOVIL -->
-    <Transition
-        enter-active-class="transition duration-300 ease-out"
-        enter-from-class="opacity-0 scale-95"
-        enter-to-class="opacity-100 scale-100"
-        leave-active-class="transition duration-200 ease-in"
-        leave-from-class="opacity-100 scale-100"
-        leave-to-class="opacity-0 scale-95"
-    >
+    <Transition enter-active-class="transition duration-300 ease-out" enter-from-class="opacity-0 scale-95"
+        enter-to-class="opacity-100 scale-100" leave-active-class="transition duration-200 ease-in"
+        leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
 
-        <div v-if="isMenuOpen" class="fixed inset-0 z-40 bg-slate-950 flex items-center justify-center  lg:hidden">
+        <div v-if="isMenuOpen" class="fixed inset-0 z-40 bg-slate-950 flex items-center justify-center lg:hidden">
 
             <nav>
-                <ul class="flex flex-col
-                        gap-8
-                        text-2xl
-                        text-center">
+                <ul class="flex flex-col gap-8 text-2xl text-center">
 
                     <li>
-                        <a href="#home" @click="isMenuOpen = false">
+                        <a href="#home" @click="isMenuOpen = false" :class="activeSection === 'home'
+                            ? 'text-white'
+                            : 'text-slate-300 hover:text-white transition-colors duration-200'">
                             Inicio
                         </a>
                     </li>
 
                     <li>
-                        <a href="#about" @click="isMenuOpen = false">
+                        <a href="#about" @click="isMenuOpen = false" :class="activeSection === 'about'
+                            ? 'text-white'
+                            : 'text-slate-300 hover:text-white transition-colors duration-200'">
                             Sobre mí
                         </a>
                     </li>
 
                     <li>
-                        <a href="#experience" @click="isMenuOpen = false">
+                        <a href="#experience" @click="isMenuOpen = false" :class="activeSection === 'experience'
+                            ? 'text-white'
+                            : 'text-slate-300 hover:text-white transition-colors duration-200'">
                             Experiencia
                         </a>
                     </li>
 
                     <li>
-                        <a href="#projects" @click="isMenuOpen = false">
+                        <a href="#projects" @click="isMenuOpen = false" :class="activeSection === 'projects'
+                            ? 'text-white'
+                            : 'text-slate-300 hover:text-white transition-colors duration-200'">
                             Proyectos
                         </a>
                     </li>
 
                     <li>
-                        <a href="#contact" @click="isMenuOpen = false">
+                        <a href="#contact" @click="isMenuOpen = false" :class="activeSection === 'contact'
+                            ? 'text-white'
+                            : 'text-slate-300 hover:text-white transition-colors duration-200'">
                             Contacto
                         </a>
                     </li>
+
                 </ul>
 
                 <div class="flex justify-center gap-6 mt-12">
 
-                    <a href="https://github.com/TU_USUARIO" target="_blank">
-
+                    <a href="https://github.com/german17cl" target="_blank">
                         <Github />
                     </a>
 
-                    <a href="https://linkedin.com/in/TU_USUARIO" target="_blank">
-
+                    <a href="https://www.linkedin.com/in/germancampdev/" target="_blank">
                         <Linkedin />
                     </a>
 
@@ -125,31 +155,41 @@ const isMenuOpen = ref(false)
                 <ul class="space-y-6">
 
                     <li>
-                        <a href="#home">
+                        <a href="#home" :class="activeSection === 'home'
+                            ? 'text-white'
+                            : 'text-slate-400 hover:text-white transition-colors duration-200'">
                             Inicio
                         </a>
                     </li>
 
                     <li>
-                        <a href="#about">
+                        <a href="#about" :class="activeSection === 'about'
+                            ? 'text-white'
+                            : 'text-slate-400 hover:text-white transition-colors duration-200'">
                             Sobre mí
                         </a>
                     </li>
 
                     <li>
-                        <a href="#experience">
+                        <a href="#experience" :class="activeSection === 'experience'
+                            ? 'text-white'
+                            : 'text-slate-400 hover:text-white transition-colors duration-200'">
                             Experiencia
                         </a>
                     </li>
 
                     <li>
-                        <a href="#projects">
+                        <a href="#projects" :class="activeSection === 'projects'
+                            ? 'text-white'
+                            : 'text-slate-400 hover:text-white transition-colors duration-200'">
                             Proyectos
                         </a>
                     </li>
 
                     <li>
-                        <a href="#contact">
+                        <a href="#contact" :class="activeSection === 'contact'
+                            ? 'text-white'
+                            : 'text-slate-400 hover:text-white transition-colors duration-200'">
                             Contacto
                         </a>
                     </li>
@@ -162,13 +202,11 @@ const isMenuOpen = ref(false)
 
         <div class="flex gap-4">
 
-            <a href="https://github.com/TU_USUARIO" target="_blank">
-
+            <a href="https://github.com/german17cl" target="_blank">
                 <Github />
             </a>
 
-            <a href="https://linkedin.com/in/TU_USUARIO" target="_blank">
-
+            <a href="https://linkedin.com/in/germancampdev" target="_blank">
                 <Linkedin />
             </a>
 
