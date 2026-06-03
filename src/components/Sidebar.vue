@@ -10,7 +10,7 @@ import {
 const isMenuOpen = ref(false)
 const activeSection = ref('home')
 
-const sections = ['home', 'about', 'experience', 'projects', 'contact']
+const sections = ['home', 'about', 'skills', 'experience', 'projects', 'contact']
 
 const updateActiveSection = () => {
     let current = 'home'
@@ -83,6 +83,18 @@ onUnmounted(() => {
                             ? 'text-white'
                             : 'text-slate-300 hover:text-white transition-colors duration-200'">
                             Sobre mí
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="#skills"
+                            @click="isMenuOpen = false"
+                            :class="activeSection === 'skills'
+                                ? 'text-white'
+                                : 'text-slate-300 hover:text-white transition-colors duration-200'"
+                        >
+                            Tecnologías
                         </a>
                     </li>
 
@@ -167,6 +179,17 @@ onUnmounted(() => {
                             ? 'text-white'
                             : 'text-slate-400 hover:text-white transition-colors duration-200'">
                             Sobre mí
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="#skills"
+                            :class="activeSection === 'skills'
+                                ? 'text-white'
+                                : 'text-slate-400 hover:text-white transition-colors duration-200'"
+                        >
+                            Tecnologías
                         </a>
                     </li>
 

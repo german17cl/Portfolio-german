@@ -1,14 +1,26 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import {
+    ref,
+    onMounted,
+    inject,
+    computed
+} from 'vue'
 import {
     Github,
     Linkedin,
     Download
 } from 'lucide-vue-next'
 
+const currentTheme = inject('currentTheme')
+const themes = inject('themes')
+
+const nameColor = computed(() => {
+    return themes[currentTheme.value].accent
+})
+
 const isVisible = ref(false)
 
-const fullText = 'Frontend Developer Junior'
+const fullText = 'Desarrollador Full Stack Junior'
 const typedText = ref('')
 
 onMounted(() => {
@@ -46,8 +58,24 @@ onMounted(() => {
                 : 'opacity-0 translate-y-8'
         ]"
     >
-        <h1 class="text-6xl font-bold">
-            Hola, soy Germán Campiño
+        <h1
+        class="
+            text-6xl
+            font-bold
+            tracking-tight
+            font-['Space_Grotesk']
+        "
+        >
+        Hola, soy
+
+        <span
+            class="transition-colors duration-500"
+            :style="{
+                color: nameColor
+            }"
+        >
+            Germán Campiño
+        </span>
         </h1>
 
         <p class="text-xl mt-4 h-8 text-slate-300">

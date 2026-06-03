@@ -1,14 +1,31 @@
 <template>
     <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
 
-        <div class="blob blob-1"></div>
+        <div
+            class="blob blob-1"
+            :style="{ background: colors.primary }"
+        ></div>
 
-        <div class="blob blob-2"></div>
+        <div
+            class="blob blob-2"
+            :style="{ background: colors.secondary }"
+        ></div>
 
-        <div class="blob blob-3"></div>
+        <div
+            class="blob blob-3"
+            :style="{ background: colors.accent }"
+        ></div>
 
     </div>
 </template>
+<script setup>
+defineProps({
+    colors: {
+        type: Object,
+        required: true
+    }
+})
+</script>
 
 <style scoped>
 .blob {
@@ -21,7 +38,7 @@
 .blob-1 {
     width: 400px;
     height: 400px;
-    background: #2563eb;
+    
     top: 10%;
     left: 5%;
 
@@ -31,7 +48,7 @@
 .blob-2 {
     width: 500px;
     height: 500px;
-    background: #1d4ed8;
+    
     top: 50%;
     right: 5%;
 
@@ -41,7 +58,7 @@
 .blob-3 {
     width: 350px;
     height: 350px;
-    background: #3b82f6;
+    
     bottom: 5%;
     left: 30%;
 
