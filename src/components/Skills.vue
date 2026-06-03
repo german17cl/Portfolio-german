@@ -13,7 +13,7 @@ const skills = [
     { name: 'HTML', color: '#f97316', icon: '/src/assets/skills/html.png' },
     { name: 'CSS', color: '#3b82f6', icon: '/src/assets/skills/css.png' },
     { name: 'JavaScript', color: '#facc15', icon: '/src/assets/skills/javascript.png' },
-    { name: 'Vue 3', color: '#22c55e', icon: '/src/assets/skills/vue.png'},
+    { name: 'Vue 3', color: '#22c55e', icon: '/src/assets/skills/vue.svg'},
     { name: 'Vite', color: '#a855f7', icon: '/src/assets/skills/vite.png' },
     { name: 'TailwindCSS', color: '#38bdf8', icon: '/src/assets/skills/tailwindcss.png' },
     { name: 'Git', color: '#ef4444', icon: '/src/assets/skills/git.png' },
@@ -21,6 +21,9 @@ const skills = [
     { name: 'Node.js', color: '#16a34a', icon: '/src/assets/skills/nodejs.png' },
     { name: 'PHP', color: '#6366f1', icon: '/src/assets/skills/php.png' },
     { name: 'MySQL', color: '#0ea5e9', icon: '/src/assets/skills/mysql.png' },
+    { name: 'Java', color: '#ef4444', icon: '/src/assets/skills/java.png' },
+    { name: 'Docker', color: '#2563eb', icon: '/src/assets/skills/docker.png' },
+    
 ]
 </script>
 
@@ -33,6 +36,10 @@ const skills = [
         <h2 class="text-4xl font-bold mb-12">
             Tecnologías
         </h2>
+
+        <p class="text-slate-400 max-w-2xl mb-12">
+            A lo largo de mi formación como desarrollador he trabajado con distintas tecnologías del ecosistema web, enfocándome en crear aplicaciones modernas, responsivas y con buenas prácticas de desarrollo.
+        </p>
 
         <!-- GRID -->
         <div
@@ -52,17 +59,19 @@ const skills = [
             >
                 <!-- GLOW EFFECT -->
                 <div
-                    class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 blur-xl transition"
+                    class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 blur-xl transition"
                     :style="{ background: skill.color }"
                 ></div>
+                <!-- ICON -->
+                <img
+                    :src="skill.icon"
+                    :alt="skill.name"
+                    class="relative z-10 w-16 h-16 object-contain mx-auto mb-4"
+                >
 
                 <!-- CONTENT -->
                 <div class="relative z-10 flex flex-col items-center text-center gap-3">
-                    <!-- DOT -->
-                    <div
-                        class="w-3 h-3 rounded-full"
-                        :style="{ background: skill.color }"
-                    ></div>
+                    
 
                     <!-- NAME -->
                     <span class="text-slate-200 font-medium">
