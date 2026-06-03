@@ -50,7 +50,7 @@ onUnmounted(() => {
             lg:hidden">
 
         <h1 class="font-bold text-lg">
-            Germán Campiño
+            Portfolio de Germán Campiño
         </h1>
 
         <button @click="isMenuOpen = !isMenuOpen">
@@ -155,11 +155,11 @@ onUnmounted(() => {
         <div>
 
             <h1 class="text-2xl font-bold">
-                Germán Campiño
+                Portfolio de Germán Campiño
             </h1>
 
             <p class="text-slate-400 mt-2">
-                Desarrollador Web
+                Desarrollador de aplicaciones web
             </p>
 
             <nav class="mt-12">
