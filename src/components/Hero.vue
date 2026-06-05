@@ -112,8 +112,8 @@ onMounted(() => {
                 
             </a>
 
-            <a href="/cv-german-campino.pdf"
-                download
+            <a href="/Portfolio-german/cv-german-campino.pdf"
+                download="CV-German-Campino.pdf"
                 class="px-6 py-2 flex gap-3 items-center border border-slate-700 rounded
                     text-slate-300
                     hover:text-white hover:border-slate-400
