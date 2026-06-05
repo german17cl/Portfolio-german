@@ -1,5 +1,26 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import phpIcon from '../assets/skills/php.png' 
+import laravelIcon from '../assets/skills/laravel.png'
+import codeigniterIcon from '../assets/skills/codeigniter.png'
+import nodejsIcon from '../assets/skills/nodejs.png'
+import javaIcon from '../assets/skills/java.png'
+import mysqlIcon from '../assets/skills/mysql.png'
+import gitIcon from '../assets/skills/git.png'
+import githubIcon from '../assets/skills/github.png'
+import dockerIcon from '../assets/skills/docker.png'
+import ciberseguridadIcon from '../assets/skills/ciberseguridad.png'
+import windowsIcon from '../assets/skills/windows.png'
+import linuxIcon from '../assets/skills/linux.png'
+import ubuntuIcon from '../assets/skills/ubuntu.png'
+import htmlIcon from '../assets/skills/html.png'
+import cssIcon from '../assets/skills/css.png'
+import javascriptIcon from '../assets/skills/javascript.png'
+import vueIcon from '../assets/skills/vue.svg'
+import viteIcon from '../assets/skills/vite.png'
+import tailwindIcon from '../assets/skills/tailwindcss.png'
+import xmlIcon from '../assets/skills/xml.png'
+import xsltIcon from '../assets/skills/xslt.png'
 
 const isVisible = ref(false)
 
@@ -13,26 +34,26 @@ const skillCategories = [
     {
         title: 'Frontend',
         skills: [
-            { name: 'HTML', color: '#f97316', icon: '/src/assets/skills/html.png' },
-            { name: 'CSS', color: '#3b82f6', icon: '/src/assets/skills/css.png' },
-            { name: 'JavaScript', color: '#facc15', icon: '/src/assets/skills/javascript.png' },
-            { name: 'Vue', color: '#22c55e', icon: '/src/assets/skills/vue.svg' },
-            { name: 'Vite', color: '#a855f7', icon: '/src/assets/skills/vite.png' },
-            { name: 'TailwindCSS', color: '#38bdf8', icon: '/src/assets/skills/tailwindcss.png' },
-            { name: 'XML', color: '#f97316', icon: '/src/assets/skills/xml.png' },
-            { name: 'XSLT', color: '#ffffff', icon: '/src/assets/skills/xslt.png' }
+            { name: 'HTML', color: '#f97316', icon: htmlIcon },
+            { name: 'CSS', color: '#3b82f6', icon: cssIcon },
+            { name: 'JavaScript', color: '#facc15', icon: javascriptIcon },
+            { name: 'Vue', color: '#22c55e', icon: vueIcon },
+            { name: 'Vite', color: '#a855f7', icon: viteIcon },
+            { name: 'TailwindCSS', color: '#38bdf8', icon: tailwindIcon },
+            { name: 'XML', color: '#f97316', icon: xmlIcon },
+            { name: 'XSLT', color: '#ffffff', icon: xsltIcon }
         ]
     },
 
     {
         title: 'Backend',
         skills: [
-            { name: 'PHP', color: '#6366f1', icon: '/src/assets/skills/php.png' },
-            { name: 'Laravel', color: '#ef4444', icon: '/src/assets/skills/laravel.png' },
-            { name: 'CodeIgniter', color: 'orange', icon: '/src/assets/skills/codeigniter.png' },
-            { name: 'Node.js', color: '#16a34a', icon: '/src/assets/skills/nodejs.png' },
-            { name: 'Java', color: '#ef4444', icon: '/src/assets/skills/java.png' },
-            { name: 'MySQL', color: '#0ea5e9', icon: '/src/assets/skills/mysql.png' },
+            { name: 'PHP', color: '#6366f1', icon: phpIcon },
+            { name: 'Laravel', color: '#ef4444', icon: laravelIcon },
+            { name: 'CodeIgniter', color: 'orange', icon: codeigniterIcon },
+            { name: 'Node.js', color: '#16a34a', icon: nodejsIcon },
+            { name: 'Java', color: '#ef4444', icon: javaIcon },
+            { name: 'MySQL', color: '#0ea5e9', icon: mysqlIcon },
             
         ]
     },
@@ -40,13 +61,13 @@ const skillCategories = [
     {
         title: 'Herramientas',
         skills: [
-            { name: 'Git', color: '#ef4444', icon: '/src/assets/skills/git.png' },
-            { name: 'GitHub', color: '#ffffff', icon: '/src/assets/skills/github.png' },
-            { name: 'Docker', color: '#2563eb', icon: '/src/assets/skills/docker.png' },
-            { name: 'Ciberseguridad', color: '#2563eb', icon: '/src/assets/skills/ciberseguridad.png' },
-            { name: 'Windows Server', color: '#0ea5e9', icon: '/src/assets/skills/windows.png' },
-            { name: 'Linux', color: 'yellow', icon: '/src/assets/skills/linux.png' },
-            { name: 'Ubuntu Server', color: 'orange', icon: '/src/assets/skills/ubuntu.png' }
+            { name: 'Git', color: '#ef4444', icon: gitIcon },
+            { name: 'GitHub', color: '#ffffff', icon: githubIcon },
+            { name: 'Docker', color: '#2563eb', icon: dockerIcon },
+            { name: 'Ciberseguridad', color: '#2563eb', icon: ciberseguridadIcon },
+            { name: 'Windows Server', color: '#0ea5e9', icon: windowsIcon },
+            { name: 'Linux', color: 'yellow', icon: linuxIcon },
+            { name: 'Ubuntu Server', color: 'orange', icon: ubuntuIcon }
         ]
     }
 ]

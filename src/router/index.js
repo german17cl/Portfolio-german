@@ -3,20 +3,20 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProjectView from '../views/ProjectView.vue'
 
-const router = createRouter({
-    history: createWebHistory(),
+    const router = createRouter({
+    history: createWebHistory('/Portfolio-german/'),
     routes: [
         {
-            path: '/',
-            name: 'home',
-            component: HomeView,
+        path: '/',
+        name: 'home',
+        component: HomeView,
         },
         {
-            path: '/projects/:id',
-            name: 'project',
-            component: ProjectView,
+        path: '/projects/:id',
+        name: 'project',
+        component: ProjectView,
         },
     ],
-})
+    })
 
-export default router
+    export default router

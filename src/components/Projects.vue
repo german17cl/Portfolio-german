@@ -17,6 +17,13 @@ import linuxIcon from '../assets/skills/linux.png'
 import ubuntuIcon from '../assets/skills/ubuntu.png'
 import dockerIcon from '../assets/skills/docker.png'
 import javascriptIcon from '../assets/skills/javascript.png'
+import musicworldAppIcon from '../assets/projects/musicworld-app.png'
+import musicworldWebIcon from '../assets/projects/musicworld-web.png'
+import cineIcon from '../assets/projects/cine.png'
+import shopclubIcon from '../assets/projects/shopclub.png'
+import txurdinagaIcon from '../assets/projects/txurdinaga.png'
+import ecotxurdiIcon from '../assets/projects/ecotxurdi.png'
+
 
 const projects = [
     
@@ -24,7 +31,7 @@ const projects = [
     {
         title: 'Centro Cívico Txurdínaga',
         description: 'Plataforma web desarrollada para modernizar la gestión de actividades del Centro Cívico de Txurdínaga, permitiendo inscripciones online, control de aforo, listas de espera y comunicación entre ciudadanos y administración mediante un sistema de incidencias y sugerencias.',
-        image: '/src/assets/projects/txurdinaga.png',
+        image: txurdinagaIcon,
         repo: 'https://github.com/2526-2DW3-TGE/G5-TGE',
         // tech: ['Vue 3', 'PHP', 'MySQL', 'TailwindCSS']
         tech: [
@@ -42,7 +49,7 @@ const projects = [
     {
         title: 'ShopClub',
         description: 'Aplicación web de comercio electrónico enfocada en la gestión de productos, navegación por catálogo y carrito de compras, ofreciendo una experiencia intuitiva y responsive para el usuario.',
-        image: '/src/assets/projects/shopclub.png',
+        image: shopclubIcon,
         repo: 'https://github.com/german17cl/recursos-vue',
         // tech: ['Vue 3', 'TailwindCSS', 'JavaScript']
         tech: [
@@ -54,7 +61,7 @@ const projects = [
     {
         title: 'EcoTxurdi',
         description: 'Proyecto tipo CTF educativo para fomentar el cuidado del medio ambiente.',
-        image: '/src/assets/projects/ecotxurdi.png',
+        image: ecotxurdiIcon,
         repo: 'https://github.com/andressito99/EcoTxurdi',
         tech: [
             { name: 'PHP', icon: phpIcon },
@@ -71,7 +78,7 @@ const projects = [
     {
         title: 'MusicWorld App',
         description: 'Aplicación en Java que gestiona elementos del mundo musical.',
-        image: '/src/assets/projects/musicworld-app.png',
+        image: musicworldAppIcon,
         repo: 'https://github.com/Dav-id15/musicWorld-App', 
         tech: [
             { name: 'Java', icon: javaIcon },
@@ -83,7 +90,7 @@ const projects = [
     {
         title: 'MusicWorld Website',
         description: 'Versión web del proyecto MusicWorld desarrollada en PHP.',
-        image: '/src/assets/projects/musicworld-web.png',
+        image: musicworldWebIcon,
         repo: 'https://github.com/Dav-id15/musicWorld-Website',
         tech: [
             { name: 'PHP', icon: phpIcon },
@@ -96,7 +103,7 @@ const projects = [
     {
         title: 'Sistema de Cine',
         description: 'Sistema de gestión de cine con control de películas y sesiones.',
-        image: '/src/assets/projects/cine.png',
+        image: cineIcon,
         repo: 'https://github.com/german17cl/recursos-vue',
         tech: [
             { name: 'PHP', icon: phpIcon },
